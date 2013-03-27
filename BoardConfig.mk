@@ -34,8 +34,8 @@ USE_CAMERA_STUB := true
 # inherit bcmdhd config
 -include device/htc/msm7x30-common/bcmdhd.mk
 
+# Bootloader Board Name
 TARGET_BOOTLOADER_BOARD_NAME := glacier
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/glacier/bluetooth/include
 
 # Trackpad
 BOARD_USE_LEGACY_TRACKPAD := true
@@ -47,7 +47,6 @@ BOARD_HAVE_HTC_FFC := true
 TARGET_PROVIDES_LIBLIGHTS := true
 
 # Adreno
-BOARD_EGL_NEEDS_LEGACY_FB := false
 BOARD_ADRENO_DECIDE_TEXTURE_TARGET := true
 
 # Audio
@@ -65,7 +64,7 @@ BOARD_KERNEL_PAGE_SIZE := 4096
 BUILD_KERNEL := true
 TARGET_KERNEL_SOURCE := kernel/htc/msm7x30
 TARGET_KERNEL_CONFIG := evervolv_glacier_defconfig
-KERNEL_TOOLCHAIN_PREFIX:=$(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.6/bin/arm-eabi-
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := linaro
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 4194304
